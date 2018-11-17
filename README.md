@@ -1,4 +1,4 @@
-# oracleCertifiedProfessional
+# Oracle Certified Professional Java SE 7 Programmer II - Exercises
 Oracle Certified Professional Java SE 7 Programmer II - Exercises
 
 
