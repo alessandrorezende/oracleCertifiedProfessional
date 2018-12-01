@@ -12,18 +12,12 @@ class ThreadFirst extends Thread {
   }
 }
 
-class ThreadSecond implements Runnable {
+/*Representa o trabalho a ser feito logo no metodo run()
+é definido o trabalho e depois passado para uma thread
+executar no metodo main
+*/
+class MyRunnable implements Runnable {
   public void run(){
-      System.out. println("Important job running in my second tread!");
-  }
-}
-
-class Thread1 extends Thread {
-  public static void main(String ... args){
-    ThreadFirst thread = new ThreadFirst();
-    thread.run();
-
-    ThreadSecond thread2 = new ThreadSecond();
-    thread2.run();
+      System.out. println("Important job running in MyRunnable!");
   }
 }
