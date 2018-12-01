@@ -21,3 +21,10 @@ class MyRunnable implements Runnable {
       System.out. println("Important job running in MyRunnable!");
   }
 }
+
+class NameRunnable implements Runnable {
+  public void run(){
+    System.out.println("Name Runnable running.. Run by " + Thread.currentThread().getName());
+  }
+
+}

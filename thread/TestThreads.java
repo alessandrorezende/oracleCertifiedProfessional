@@ -8,7 +8,7 @@ public class TestThreads{
       //uma nova pilha como no segundo exemplo.
       ThreadFirst thread = new ThreadFirst();
       thread.run(); //Válido, mas não começa uma nova thread
-      
+
       //--------------------------------------------------------------
       //2ex: Forma correta de passar um trabalho para uma thread executar
       //em uma nova pilha de chamadas.
@@ -19,5 +19,11 @@ public class TestThreads{
       Thread t = new Thread(job);
       t.start();
       //--------------------------------------------------------------
+
+      NameRunnable jobName = new NameRunnable();
+
+      Thread t1 = new Thread(jobName);
+      t1.setName("Trabalhador 01");
+      t1.start();
     }
 }
