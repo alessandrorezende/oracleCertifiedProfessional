@@ -21,7 +21,9 @@ class MyRunnable implements Runnable {
       System.out. println("Important job running in MyRunnable!");
   }
 }
-
+/*
+  Saber o nome da thread que está executando meu Runnable
+*/
 class NameRunnable implements Runnable {
   public void run(){
     System.out.println("Name Runnable running.. Run by " + Thread.currentThread().getName());
