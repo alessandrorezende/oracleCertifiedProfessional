@@ -45,7 +45,14 @@ public class TestThreads{
       one.start();
       two.start();
       three.start();
+      //--------------------------------------------------------------
+      //6ex: contando de 1 até 100 fazend a thread dormir por 1 segundo a cada numero
+      //e exibe uma string a cada dez números
+      System.out.println("---------------------------------------------");
+      CountRunnable jobCount = new CountRunnable();
 
+      Thread countT = new Thread(jobCount);
+      countT.start();
 
 
     }

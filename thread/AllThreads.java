@@ -35,6 +35,24 @@ class NamesRunnable implements Runnable {
   public void run(){
     for(int i=0; i<3; i++){
       System.out.println("Run by " + Thread.currentThread().getName() +" -  i is " + i);
+      try{
+          Thread.sleep(1000);
+      }catch(InterruptedException ex){}
     }
   }
+}
+
+class CountRunnable implements Runnable{
+
+  public void run(){
+     for(int i=1;i<=100;i++){
+       if(i % 10 == 0){
+          System.out.println("Contagem igual a " + i);
+       }
+       try{
+           Thread.sleep(1000);
+       }catch(InterruptedException ex){}
+     }
+  }
+
 }
