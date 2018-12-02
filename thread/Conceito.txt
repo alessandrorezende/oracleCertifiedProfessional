@@ -1,0 +1,2 @@
+1 - Cada thread vai começar e cada thread vai executar até terminar.
+2 - Uma thread termina de ser uma thread quando seu método run() alvo finaliza.

@@ -19,11 +19,34 @@ public class TestThreads{
       Thread t = new Thread(job);
       t.start();
       //--------------------------------------------------------------
-
+      //3ex: Informar um nome para a thread que executará meu jobName
+      System.out.println("---------------------------------------------");
       NameRunnable jobName = new NameRunnable();
 
       Thread t1 = new Thread(jobName);
       t1.setName("Trabalhador 01");
       t1.start();
+      //--------------------------------------------------------------
+      //4ex: Saber o nome da thread execuntando o main
+      System.out.println("Thread execuntado o main is: " + Thread.currentThread().getName());
+      //--------------------------------------------------------------
+      //5ex:Iniciando e executando multiplas Threads
+      System.out.println("---------------------------------------------");
+      NamesRunnable jobsName = new NamesRunnable();
+
+      Thread one = new Thread(jobsName);
+      Thread two = new Thread(jobsName);
+      Thread three = new Thread(jobsName);
+
+      one.setName("Pedreiro 1");
+      two.setName("Pedreiro 2");
+      three.setName("Pedreiro 3");
+
+      one.start();
+      two.start();
+      three.start();
+
+
+
     }
 }
