@@ -46,8 +46,14 @@ public class TestThreads{
       one.start();
       two.setPriority(Thread.NORM_PRIORITY);
       two.start();
-      three.setPriority(Thread.MAX_PRIORITY);
-      three.start();
+      try{
+          three.setPriority(Thread.MAX_PRIORITY);
+          three.start();
+          three.join();
+      }catch(InterruptedException ex){
+        ex.printStackTrace();
+      }
+
       //--------------------------------------------------------------
       //6ex: contando de 1 até 100 fazend a thread dormir por 1 segundo a cada numero
       //e exibe uma string a cada dez números

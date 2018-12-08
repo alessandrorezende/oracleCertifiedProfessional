@@ -1,10 +1,10 @@
-1 - Cada thread vai começar e cada thread vai executar até terminar.
-2 - Uma thread termina de ser uma thread quando seu método run() alvo finaliza.
-3 - Uma vez que a thread tenha sido iniciada, ela nunca pode ser iniciada novamente.
-4 - Estados da thread: new, runnable, (waiting,blocked e sleeping) e dead.
-5 - A ordem na qual as threads runnable são escolhidas não é garantida.
-6 - Usar sleep() é a melhor maneira de ajudar todas as threads a terem uma chance de executar.
-7 - A thread em execução vai ser de prioridade igual ou maior que as threads de maior prioridade do pool.
-8 - Método yield() coloca a thread corrente de volta ao estado runnacle para permitir que outras threads de mesma prioridade tenham sua vez (Não há garantias).
-9 - Método yield() faz a thread ir de running para runnable.
-    
+1  - Cada thread vai começar e cada thread vai executar até terminar.
+2  - Uma thread termina de ser uma thread quando seu método run() alvo finaliza.
+3  - Uma vez que a thread tenha sido iniciada, ela nunca pode ser iniciada novamente.
+4  - Estados da thread: new, runnable, (waiting,blocked e sleeping) e dead.
+5  - A ordem na qual as threads runnable são escolhidas não é garantida.
+6  - Usar sleep() é a melhor maneira de ajudar todas as threads a terem uma chance de executar.
+7  - A thread em execução vai ser de prioridade igual ou maior que as threads de maior prioridade do pool.
+8  - Método yield() coloca a thread corrente de volta ao estado runnable para permitir que outras threads de mesma prioridade tenham sua vez (Não há garantias).
+9  - Método yield() faz a thread ir de running para runnable  (Não há garantias).
+10 - Método join() garante que a thread corrente vai parar a execução até que a thread a qual foi juntada (thread com a chamada join()) seja concluida.
