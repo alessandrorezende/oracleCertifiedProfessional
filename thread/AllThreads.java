@@ -54,5 +54,12 @@ class CountRunnable implements Runnable{
        }catch(InterruptedException ex){}
      }
   }
+}
+
+class RunningThread implements Runnable{
+
+  public void run(){
+    System.out.println(Thread.currentThread().getName() + " is running...");
+  }
 
 }
