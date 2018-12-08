@@ -42,8 +42,11 @@ public class TestThreads{
       two.setName("Pedreiro 2");
       three.setName("Pedreiro 3");
 
+      one.setPriority(Thread.MIN_PRIORITY);
       one.start();
+      two.setPriority(Thread.NORM_PRIORITY);
       two.start();
+      three.setPriority(Thread.MAX_PRIORITY);
       three.start();
       //--------------------------------------------------------------
       //6ex: contando de 1 até 100 fazend a thread dormir por 1 segundo a cada numero
@@ -53,7 +56,7 @@ public class TestThreads{
 
       Thread countT = new Thread(jobCount);
       countT.start();
-
+        //--------------------------------------------------------------
 
     }
 }
