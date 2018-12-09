@@ -13,3 +13,4 @@
 13 - Uma vez que uma thread adquira o lock de um objeto, nenhuma outra thread pode entrar em qualquer dos métodos sincronizados daquela classe para aquele objeto.
 14 - Se uma thread entra em sleep, ela retém quaisquer locks que já tinha - ela não os libera.
 15 - Pode ser  sincronizado um bloco de código, em vez de um método.
+15 - Um método estático pode ser sincronizado.
