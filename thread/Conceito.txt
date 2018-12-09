@@ -8,3 +8,5 @@
 8  - Método yield() coloca a thread corrente de volta ao estado runnable para permitir que outras threads de mesma prioridade tenham sua vez (Não há garantias).
 9  - Método yield() faz a thread ir de running para runnable  (Não há garantias).
 10 - Método join() garante que a thread corrente vai parar a execução até que a thread a qual foi juntada (thread com a chamada join()) seja concluida.
+11 - O agendador de threads pode optar por mover a thread atual do estado running para runnable, de forma a dar a outra thread a chance de executar. Nenhuma razão é necessária (O agendador de threads pode trocar o estado das threads quando bem entender).
+12 - Palavra chave 'synchronized' garante que enquanto uma thread está usando um método outra thread não poderá entrar nesse método.
