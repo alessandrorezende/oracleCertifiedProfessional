@@ -10,3 +10,6 @@
 10 - Método join() garante que a thread corrente vai parar a execução até que a thread a qual foi juntada (thread com a chamada join()) seja concluida.
 11 - O agendador de threads pode optar por mover a thread atual do estado running para runnable, de forma a dar a outra thread a chance de executar. Nenhuma razão é necessária (O agendador de threads pode trocar o estado das threads quando bem entender).
 12 - Palavra chave 'synchronized' garante que enquanto uma thread está usando um método outra thread não poderá entrar nesse método.
+13 - Uma vez que uma thread adquira o lock de um objeto, nenhuma outra thread pode entrar em qualquer dos métodos sincronizados daquela classe para aquele objeto.
+14 - Se uma thread entra em sleep, ela retém quaisquer locks que já tinha - ela não os libera.
+15 - Pode ser  sincronizado um bloco de código, em vez de um método.

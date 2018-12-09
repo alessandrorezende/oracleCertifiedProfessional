@@ -16,7 +16,10 @@ class Account implements Runnable {
 
   public void run(){
       for(int x=0; x <3; x++){
-          this.makeWithdrawal(10);
+
+          //this.makeWithdrawal(20); //com metodo synchronized
+          this.makeWithdrawalTypeTwo(10); //com bloco synchronized
+
           if(this.getBalance() < 0){
               System.out.println("A conta esta no vermelho!");
           }
@@ -36,6 +39,21 @@ class Account implements Runnable {
           System.out.println(Thread.currentThread().getName() + " fez a retirada com sucesso!");
       }else{
           System.out.println("Nao ha dinheiro suficiente para " + Thread.currentThread().getName() + " retirar. Saldo: " + getBalance());
+      }
+  }
+
+  private void makeWithdrawalTypeTwo(int amt){
+      synchronized(this){
+          if(getBalance() >= amt){
+                System.out.println(Thread.currentThread().getName() + " esta fazendo uma retirada!");
+                try{
+                    Thread.sleep(500);
+                }catch(InterruptedException ex){}
+                withdraw(amt);
+                System.out.println(Thread.currentThread().getName() + " fez a retirada com sucesso!");
+          }else{
+              System.out.println("Nao ha dinheiro suficiente para " + Thread.currentThread().getName() + " retirar. Saldo: " + getBalance());
+          }
       }
   }
 
